@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project implements a deep learning model for Image Quality Assessment (IQA) based on a dual-branch CLIP model and Cross-Attention mechanism. By fusing visual features and text description features, it achieves accurate prediction of image quality.
-![framwork](readme_images\methods.png)
+![framwork](methods.png)
 
 ---
 
@@ -102,7 +102,7 @@ Both weights learnable yields best results.
 ## Parameter Analysis
 
 - **Insertion position $L_v$**: Best at $L_v=12$ (SRCC 0.846 on AGIQA-3k, 0.982 on CSIQ).  
-  ![Effect of Lv](readme_images\柱状.png)
+  ![Effect of Lv](柱状.png)
 
 - **Learnable weights evolution**: On AGIQA-3k, $\omega_1$ (content) more critical; on TID2013, both balanced.  
   ![Weights evolution]()
@@ -110,13 +110,13 @@ Both weights learnable yields best results.
 ## Visual Analysis
 
 - **Heatmaps**: Cross-attention focuses on semantically meaningful regions.  
-  ![Heatmaps](readme_images\weight.png)
+  ![Heatmaps](weight.png)
 
 - **Loss convergence**: Fast decrease in first 10 epochs, smooth convergence.  
-  ![Loss curves](readme_images\loss.png)
+  ![Loss curves](loss.png)
 
 - **Scatter plot**: Predicted scores tightly around diagonal, high correlation with ground truth.  
-  ![Scatter plot](readme_images\scratter.png)
+  ![Scatter plot](scratter.png)
 
 ---
 ## Downloading Pre-trained Models
