@@ -70,19 +70,15 @@ We compare DCLIP-CA with representative no-reference IQA methods on AGIQA-3k, LI
 
 Five configurations on AGIQA-3k, CSIQ, TID2013. Full model (dual-stream + CA) performs best.
 
-<table>
-  <thead>
-    <tr><th>#</th><th>Content</th><th>Quality</th><th>CA</th><th colspan="2">AGIQA-3k</th><th colspan="2">CSIQ</th><th colspan="2">TID2013</th></tr>
-    <tr><th></th><th></th><th></th><th></th><th>SRCC</th><th>PLCC</th><th>SRCC</th><th>PLCC</th><th>SRCC</th><th>PLCC</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>1</td><td>✗</td><td>✓</td><td>✗</td><td>0.736</td><td>0.807</td><td>0.719</td><td>0.799</td><td>0.726</td><td>0.806</td></tr>
-    <tr><td>2</td><td>✗</td><td>✓</td><td>✓</td><td>0.825</td><td>0.887</td><td>0.951</td><td><b>0.986</b></td><td>0.923</td><td>0.924</td></tr>
-    <tr><td>3</td><td>✓</td><td>✗</td><td>✗</td><td>0.667</td><td>0.766</td><td>0.647</td><td>0.787</td><td>0.760</td><td>0.814</td></tr>
-    <tr><td>4</td><td>✓</td><td>✗</td><td>✓</td><td><b>0.857</b></td><td><b>0.912</b></td><td><u>0.972</u></td><td><u>0.982</u></td><td><u>0.944</u></td><td><u>0.952</u></td></tr>
-    <tr><td>5</td><td>✓</td><td>✓</td><td>✓</td><td><u>0.846</u></td><td><u>0.907</u></td><td><b>0.980</b></td><td><u>0.984</u></td><td><b>0.956</b></td><td><b>0.963</b></td></tr>
-  </tbody>
-</table>
+| # | Content | Quality | CA | AGIQA-3k | | CSIQ | | TID2013 | |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|   |         |         |    | SRCC | PLCC | SRCC | PLCC | SRCC | PLCC |
+| 1 | ✗ | ✓ | ✗ | 0.736 | 0.807 | 0.719 | 0.799 | 0.726 | 0.806 |
+| 2 | ✗ | ✓ | ✓ | 0.825 | 0.887 | 0.951 | **0.986** | 0.923 | 0.924 |
+| 3 | ✓ | ✗ | ✗ | 0.667 | 0.766 | 0.647 | 0.787 | 0.760 | 0.814 |
+| 4 | ✓ | ✗ | ✓ | **0.857** | **0.912** | <u>0.972</u> | <u>0.982</u> | <u>0.944</u> | <u>0.952</u> |
+| 5 | ✓ | ✓ | ✓ | <u>0.846</u> | <u>0.907</u> | **0.980** | <u>0.984</u> | **0.956** | **0.963** |
+
 ### Joint Loss
 
 Comparison of alignment losses. Full joint loss works best.
