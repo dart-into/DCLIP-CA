@@ -155,7 +155,14 @@ pretrained = "/path/to/your/open_clip_model.safetensors"
 
 ## Usage
 
-### 1. Basic Training
+
+### 1.Installing Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Basic Training
 
 ```python
 from iqa_clip_cross_attention import main
@@ -164,7 +171,7 @@ from iqa_clip_cross_attention import main
 main(dataset_name="tid2013")
 ```
 
-### 2. Modify Dataset
+### 3. Modify Dataset
 
 Modify the configuration at the beginning of the code:
 
@@ -172,7 +179,7 @@ Modify the configuration at the beginning of the code:
 dataset = "agiqa"  # Options: agiqa, tid2013, csiq, live
 ```
 
-### 3. Modify Model Configuration
+### 4. Modify Model Configuration
 
 ```python
 model_this = "my_custom_model"  # Custom model name
@@ -199,11 +206,6 @@ scikit-learn
 matplotlib
 ```
 
-### Installing Dependencies
-
-```bash
-pip install -r requirements.txt
-```
 
 ---
 
