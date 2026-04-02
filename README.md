@@ -173,7 +173,7 @@ main(dataset_name="tid2013")
 
 ### 3. Modify Dataset
 
-Modify the configuration at the beginning of the code:
+Modify the configuration at the beginning of the iqa_clip_cross_attention.py:
 
 ```python
 dataset = "agiqa"  # Options: agiqa, tid2013, csiq, live
