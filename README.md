@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project implements a deep learning model for Image Quality Assessment (IQA) based on a dual-branch CLIP model and Cross-Attention mechanism. By fusing visual features and text description features, it achieves accurate prediction of image quality.
+This project implements a deep learning model for Image Quality Assessment (IQA) based on a dual-stream CLIP model and Cross-Attention mechanism. By fusing visual features and text description features, it achieves accurate prediction of image quality.
 ![framwork](methods.png)
 
 ---
