@@ -13,7 +13,7 @@ This project implements a deep learning model for Image Quality Assessment (IQA)
 .
 ├── iqa_clip_cross_attention.py    # Main model code
 ├── iqa_clip_cross_attention.md    # This documentation
-├──  datasets/                      # Dataset directory (text labels only)
+└── datasets/                      # Dataset directory (text labels only)
 └── requirements.txt                
 ```
 
@@ -22,12 +22,12 @@ This project implements a deep learning model for Image Quality Assessment (IQA)
 ## Supported Datasets
 
 
-| Dataset     | Path Configuration                 |
-| ----------- | ---------------------------------- |
-| **AGIQA**   | `agiqa_csv_path`, `agiqa_root`     |
-| **TID2013** | `tid2013_csv_path`, `tid2013_root` |
-| **CSIQ**    | `csiq_csv_path`, `csiq_root`       |
-| **LIVE**    | `live_csv_path`, `live_root`       |
+| Dataset   | Links                                                       |
+| --------- | ----------------------------------------------------------- |
+| TID2013      | http://www.ponomarenko.info/tid2013.htm     |
+| CSIQ      | https://s2.smu.edu/~eclarson/csiq.html |
+| AGIQA     |  https://github.com/lcysyzxdxc/AGIQA-3k-Database 
+| LIVE      |  https://live.ece.utexas.edu/research/Quality/index.htm 
 
 
 ---
@@ -56,20 +56,35 @@ This project implements a deep learning model for Image Quality Assessment (IQA)
 
 
 ---
+## Downloading Pre-trained Models
 
-## Output Files
+This project uses OpenCLIP pre-trained models. You need to download the model weights before training.
 
-### Training Output
+### Using OpenCLIP Library (Recommended)
 
+```python
+import open_clip
+
+# Download and cache the model
+model, _, preprocess = open_clip.create_model_and_transforms(
+    'ViT-L-14-336', 
+    pretrained='openai'
+)
 ```
-{ModelName}_train_procedure_{DatasetName}/
-├── history.csv          # Training history
-├── loss.png             # Loss curve
-├── spearman.png         # Spearman curve
-├── pearson.png          # Pearson curve
-├── mse.png              # MSE curve
-├── k1.png               # Weight k1 changes
-└── k2.png               # Weight k2 changes
+
+### Manual Download
+
+If you prefer manual download, you can download the `.safetensors` file from the following sources:
+
+| Model | Download Link | File |
+|-------|--------------|------|
+| **ViT-L-14-336** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
+| **ViT-L-14** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
+
+After downloading, update the `pretrained` parameter in the code:
+
+```python
+pretrained = "/path/to/your/open_clip_model.safetensors"
 ```
 
 ---
@@ -104,38 +119,6 @@ lr = 1e-4                        # Adjust learning rate
 
 ---
 
-## Downloading Pre-trained Models
-
-This project uses OpenCLIP pre-trained models. You need to download the model weights before training.
-
-### Using OpenCLIP Library (Recommended)
-
-```python
-import open_clip
-
-# Download and cache the model
-model, _, preprocess = open_clip.create_model_and_transforms(
-    'ViT-L-14-336', 
-    pretrained='openai'
-)
-```
-
-### Manual Download
-
-If you prefer manual download, you can download the `.safetensors` file from the following sources:
-
-| Model | Download Link | File |
-|-------|--------------|------|
-| **ViT-L-14-336** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
-| **ViT-L-14** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
-
-After downloading, update the `pretrained` parameter in the code:
-
-```python
-pretrained = "/path/to/your/open_clip_model.safetensors"
-```
-
----
 
 ## Dependencies
 
