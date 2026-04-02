@@ -103,10 +103,10 @@ Both weights learnable yields best results.
 ## Parameter Analysis
 
 - **Insertion position $L_v$**: Best at $L_v=12$ (SRCC 0.846 on AGIQA-3k, 0.982 on CSIQ).  
-  ![Effect of Lv](柱状.png)
+  ![Effect of Lv](bar.png)
 
 - **Learnable weights evolution**: On AGIQA-3k, $\omega_1$ (content) more critical; on TID2013, both balanced.  
-  ![Weights evolution]()
+  ![Weights evolution](weight.png)
 
 ## Visual Analysis
 
