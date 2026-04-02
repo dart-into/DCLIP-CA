@@ -79,7 +79,6 @@ If you prefer manual download, you can download the `.safetensors` file from the
 | Model | Download Link | File |
 |-------|--------------|------|
 | **ViT-L-14-336** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
-| **ViT-L-14** | [HuggingFace - open_clip](https://huggingface.co/huggingface/open_clip) | `open_clip_pytorch_model.safetensors` |
 
 After downloading, update the `pretrained` parameter in the code:
 
