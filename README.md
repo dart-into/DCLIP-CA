@@ -111,7 +111,7 @@ Both weights learnable yields best results.
 ## Visual Analysis
 
 - **Heatmaps**: Cross-attention focuses on semantically meaningful regions.  
-  ![Heatmaps](weight.png)
+  ![Heatmaps](heatmap.png)
 
 - **Loss convergence**: Fast decrease in first 10 epochs, smooth convergence.  
   ![Loss curves](loss.png)
